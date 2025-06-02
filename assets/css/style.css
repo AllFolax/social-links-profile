@@ -1,0 +1,140 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Young+Serif&display=swap');
+
+/* Reset / base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 10px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Font sizes */
+    --font-size-paragraph: 14px;
+    --font-size-name: 24px;
+
+    /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 600; 
+    --font-weight-bold: 700;
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;  
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+}
+
+/* Style général */
+body {
+    font-family: "Inter", serif;
+    color: var(--white);
+    font-size: var(--font-size-paragraph);
+    background-color: var(--grey-900);
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Layout */
+main {
+    max-width: 375px;
+    margin: auto;
+    padding: var(--spacing-xl);
+    background-color: var(--grey-800);
+    border-radius: var(--radius-md);
+}
+
+/* Image */
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+/* Info Profile*/
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--font-size-name);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile-info p:first-of-type {
+    color: var(--green);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-lg);
+}
+
+.profile-info p:last-of-type {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Social Links */
+.social-links {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.social-links a {
+    font-size: var(--font-size-paragraph);
+    display: block;  
+    padding: var(--spacing-sm);
+    text-align: center;
+    border-radius: var(--radius-sm);
+    background-color: var(--grey-700);
+    margin: var(--spacing-md) 0;
+}
+
+.social-links a:hover {
+    background-color: var(--green);
+    transition: background-color 0.5s ease;
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--green);
+}
+
+/* Responsive Design */
+@media (min-width: 1440px) {
+    main {
+        max-width: 375px;
+        width: 100%;
+    }
+}
